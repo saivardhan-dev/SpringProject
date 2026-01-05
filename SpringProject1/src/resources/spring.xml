@@ -3,11 +3,24 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<!--    <bean id="alien" class="com.vardhan.Alien" scope="prototype">  by default, scope of bean is singleton-->
 
-    <bean id="alien" class="com.vardhan.Alien">
-        <property name="laptop" ref="laptop"/>
+    <bean id="alien" class="com.vardhan.Alien" autowire="byName">
+<!--        <constructor-arg type="int" value="21"/>-->
+<!--        <constructor-arg type="com.vardhan.Laptop" ref="laptop1"/>-->
+
+<!--        <constructor-arg index="0" value="21"/>-->
+<!--        <constructor-arg index="1" ref="laptop1"/>-->
+
+<!--        <constructor-arg name="age" value="21"/>-->
+<!--        <constructor-arg name="laptop" ref="laptop1"/>-->
+
+<!--        <property name="age" value="21"/>-->
+<!--        <property name="com" ref="com"/>-->
     </bean>
-    <bean id="laptop" class="com.vardhan.Laptop">
+    <bean id="com1" class="com.vardhan.Laptop">
+    </bean>
+    <bean id="com" class="com.vardhan.Desktop">
     </bean>
 
 </beans>

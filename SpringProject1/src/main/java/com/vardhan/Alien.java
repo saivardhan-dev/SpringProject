@@ -2,19 +2,38 @@ package com.vardhan;
 
 
 public class Alien {
-    int age;
+    //private int age;
+    private Computer com;
 
-    Laptop laptop;
 
     public Alien(){
-        System.out.println("Creating Object");
+        System.out.println("Object created");;
     }
 
-    public void setLaptop(Laptop laptop) {
-        this.laptop = laptop;
+//    public Alien(int age, Computer com){
+//        this.age = age;
+//        this.com = com;
+//    }
+
+//    public int getAge() {
+//        return age;
+//    }
+//
+//    public void setAge(int age) {
+//        System.out.println("Setter called");
+//        this.age = age;
+//    }
+
+
+    public Computer getCom() {
+        return com;
+    }
+
+    public void setCom(Computer com) {
+        this.com = com;
     }
 
     public void code(){
-        laptop.compile();
+        com.compile();
     }
 }

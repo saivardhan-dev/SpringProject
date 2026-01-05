@@ -1,13 +1,14 @@
 package com.vardhan;
 
 
-public class Laptop {
+public class Laptop implements Computer {
 
-    public Laptop(){
-        System.out.println("Laptop created");
-    }
+//    public Laptop(){
+//        System.out.println("Laptop created");
+//    }
 
+    @Override
     public void compile(){
-        System.out.println("Compiling.....");
+        System.out.println("Compiling using Laptop...");
     }
 }

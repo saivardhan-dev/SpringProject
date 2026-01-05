@@ -1,8 +1,15 @@
 package com.vardhan;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Alien {
-    //private int age;
+    private int age;
+
+    @Autowired
+//    @Qualifier("desktop")
     private Computer com;
 
 
@@ -19,10 +26,10 @@ public class Alien {
 //        return age;
 //    }
 //
-//    public void setAge(int age) {
-//        System.out.println("Setter called");
-//        this.age = age;
-//    }
+    public void setAge(int age) {
+        System.out.println("Setter called");
+        this.age = age;
+    }
 
 
     public Computer getCom() {

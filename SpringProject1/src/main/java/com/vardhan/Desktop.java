@@ -1,18 +1,10 @@
 package com.vardhan;
 
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Component;
 
-@Component
-
-public class Desktop implements Computer{
-
-    public Desktop(){
-        System.out.println("Desktop Constructor");
-    }
+public class Desktop implements Computer {
 
     @Override
     public void compile(){
-        System.out.println("Compiling using desktop....");
+        System.out.println("Programmer using this Desktop to compile");
     }
 }

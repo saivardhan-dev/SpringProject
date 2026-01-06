@@ -1,16 +1,15 @@
-package com.vardhan;
+package com.vardhan.springbootpractice;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-
 @Component
-@Scope("prototype")
 public class Programmer {
 
+    @Value("25")
     private int age;
-
 
     public int getAge() {
         return age;
@@ -18,7 +17,6 @@ public class Programmer {
 
     public void setAge(int age) {
         this.age = age;
-        System.out.println("Programmer age: " + age);
     }
 
 
@@ -28,11 +26,13 @@ public class Programmer {
         return computer;
     }
 
+    @Autowired
+    @Qualifier("laptop")
     public void setComputer(Computer computer) {
         this.computer = computer;
     }
 
-    public void code(){
+    void code(){
         computer.compile();
     }
 }

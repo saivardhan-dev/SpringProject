@@ -24,5 +24,6 @@ public class App
         obj2.setAge(30);
         System.out.println("obj1 age: " + obj1.getAge());
         System.out.println("obj2 age: " + obj2.getAge());
-        System.out.println("Programmer bean is singleton scoped, so both references point to the same object. Instead of Overwriting the obj1 with obj2, explicitly we need to define the scope as prototype.");    }
+        System.out.println("Programmer bean is singleton scoped, so both references point to the same object. Instead of Overwriting the obj1 with obj2, explicitly we need to define the scope as prototype.");
+    }
 }

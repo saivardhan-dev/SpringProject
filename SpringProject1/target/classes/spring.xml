@@ -5,7 +5,7 @@
 
 
 
-    <bean id="programmer" class="com.vardhan.Programmer" autowire="byName" />
+    <bean id="programmer" class="com.vardhan.Programmer" autowire="byName" scope="prototype"/>
 
     <bean id="computer1" class="com.vardhan.Desktop">
     </bean>

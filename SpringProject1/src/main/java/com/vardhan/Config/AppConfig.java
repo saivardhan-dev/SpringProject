@@ -1,10 +1,10 @@
 package com.vardhan.Config;
 
+import com.vardhan.Computer;
+import com.vardhan.Laptop;
+import com.vardhan.Desktop;
 import com.vardhan.Programmer;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 
 @ComponentScan("com.vardhan")
@@ -12,8 +12,14 @@ import org.springframework.context.annotation.Scope;
 public class AppConfig {
 
 //    @Bean
+//    @Scope("prototype")
 //    public Programmer programmer(){
 //        Programmer programmer = new Programmer();
 //        return programmer;
 //    }
+    @Bean
+    public Computer desktop(){
+        Computer desktop =  new Desktop();
+        return desktop;
+    }
 }

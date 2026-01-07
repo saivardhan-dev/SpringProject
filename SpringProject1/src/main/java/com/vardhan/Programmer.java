@@ -1,6 +1,6 @@
 package com.vardhan;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class Programmer {
 
+    //@Value("25")
     private int age;
 
 
@@ -20,7 +21,6 @@ public class Programmer {
         this.age = age;
         System.out.println("Programmer age: " + age);
     }
-
 
     private Computer computer;
 

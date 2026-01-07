@@ -19,7 +19,6 @@ public class Programmer {
         this.age = age;
     }
 
-
     private Computer computer;
 
     public Computer getComputer() {
